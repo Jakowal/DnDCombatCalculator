@@ -1,0 +1,4 @@
+Name,HP,Attacks,Attack1ToHit,Attack1Dmg,Attack2ToHit,Attack2Dmg...
+Aarakocra,13,2,4,1d4+2,+4,1d6+2
+Aboleth,135,2,+9,2d6+5,+9,3d6+5
+Deva,136,1,+8,1d6+4/4d8

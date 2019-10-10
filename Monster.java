@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+
 public class Monster {
 
   public int curhp;
   public boolean isAlive = true;
   public boolean isDead = false;
   public boolean isStable = false;
+  public ArrayList<Attack> attacks = new ArrayList<>();
   String name;
   int maxhp;
   int initiative = 99;
@@ -14,6 +17,10 @@ public class Monster {
     name = n;
     maxhp = h;
     curhp = maxhp;
+  }
+
+  public static void addAttack(Monster m, int toHit, String damage) {
+    m.attacks.add(new Attack(toHit, damage));
   }
 
   public static Monster makeMonster(String n, int h, int i) {

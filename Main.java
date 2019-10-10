@@ -1,11 +1,16 @@
 import java.util.Stack;
 import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Scanner;
 
-import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.File;
 
 import javafx.event.*;
+
+import javafx.collections.transformation.SortedList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
@@ -21,23 +26,29 @@ import javafx.scene.text.Text;
 import javafx.scene.text.Font;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ComboBox;
 
 import javafx.stage.Stage;
+import javafx.stage.FileChooser;
 
 public class Main extends Application {
 
   static int monsterCount = 1;
-  static Text header = new Text("Monster Tracker" + "\n" + "Monster Count: " + monsterCount);
+  static Text header = new Text("Monster Count: " + monsterCount);
   static Pane pane = new Pane();
   static Scene scene = new Scene(pane);
+  static Stage mainStage;
 
-  FileReader reader;
-  File premadeMonsters = new File("./PremadeMonsters.txt");
+  static Scanner scanner;
+  static File premadeMonsters = new File("./PremadeMonsters.txt");
 
   static Stack<Button> addbuttons = new Stack<>();
   static Stack<TextField[]> fields = new Stack<>();
+  static Stack<ComboBox<Monster>> dropDowns = new Stack<>();
+
   static ArrayList<TextField> damageFields = new ArrayList<>();
   static ArrayList<Monster> monsters = new ArrayList<>();
+  static ArrayList<Monster> premadeMonsterList = new ArrayList<>();
   static ArrayList<Text> hpText = new ArrayList<>();
   static ArrayList<Button[]> deathSaves = new ArrayList<>();
   static ArrayList<Circle[]> deathSaveSigns = new ArrayList<>();
@@ -48,14 +59,16 @@ public class Main extends Application {
 
   @Override
   public void start(Stage stage) {
+    mainStage = stage;
     pane.setPrefSize(1000,600);
 
     header.setFont(new Font(20));
-    header.setX(800);  header.setY(20);
+    header.setX(720);  header.setY(30);
     pane.getChildren().add(header);
 
     pane.getChildren().add(makeStopButton());
     pane.getChildren().add(makeFileButton());
+    loadPremadeMonsters();
     addMonsterBlock();
 
     stage.setTitle("Jawa's Combat Tracker");
@@ -93,16 +106,48 @@ public class Main extends Application {
     initiative.setLayoutX(340); initiative.setLayoutY(70 + 70*(monsterCount-1));
 
     fields.push(new TextField[]{name, hp, initiative});
+    dropDowns.push(makePremadeMonsterDropdown());
 
     pane.getChildren().add(nameInfo); pane.getChildren().add(hpInfo); pane.getChildren().add(initiativeInfo);
     pane.getChildren().add(name); pane.getChildren().add(hp); pane.getChildren().add(initiative);
-    pane.getChildren().add(makeAddButton());
+    pane.getChildren().add(makeAddButton()); pane.getChildren().add(dropDowns.peek());
+  }
+
+  private static ComboBox<Monster> makePremadeMonsterDropdown() {
+    ComboBox<Monster> monsterDrop = new ComboBox();
+    ObservableList list = FXCollections.observableList(premadeMonsterList);
+    monsterDrop.setItems(list);
+    monsterDrop.setLayoutX(750); monsterDrop.setLayoutY(70 + 70*(monsterCount-1));
+    monsterDrop.setOnAction(new Premadehandler());
+    return monsterDrop;
   }
 
   private static void removeMonsterBlock(TextField[] t) {
     for (int i = 0; i < 3; i++) {
       pane.getChildren().remove(t[i]);
       Text text = new Text(t[i].getCharacters().toString());
+      text.setFont(new Font(12));
+      text.setLayoutX(t[i].getLayoutX()); text.setLayoutY(t[i].getLayoutY()+15);
+      pane.getChildren().add(text);
+      if (i == 1) hpText.add(text);
+    }
+    TextField field = new TextField();
+    field.setLayoutX(t[1].getLayoutX()+40); field.setLayoutY(t[1].getLayoutY());
+    field.setOnAction(new Damagehandler());
+    field.setPrefWidth(60);
+    damageFields.add(field);
+    pane.getChildren().add(field);
+    deathSaves.add(makeDeathSaveButtons());
+    deathSaveSigns.add(makeDeathSaveSigns());
+  }
+
+  private static void removeMonsterBlock(TextField[] t, Monster m) {
+    for (int i = 0; i < 3; i++) {
+      pane.getChildren().remove(t[i]);
+      Text text = new Text();
+      if (i == 0) {text = new Text(m.name);}
+      else if (i == 1) {text = new Text(""+m.curhp);}
+      else if (m.initiative != 99) {text = new Text(""+m.initiative);}
       text.setFont(new Font(12));
       text.setLayoutX(t[i].getLayoutX()); text.setLayoutY(t[i].getLayoutY()+15);
       pane.getChildren().add(text);
@@ -130,6 +175,30 @@ public class Main extends Application {
       points[i] = p;
     }
     return points;
+  }
+
+  private static void loadPremadeMonsters() {
+    FileChooser chooser = new FileChooser();
+    try {scanner = new Scanner(premadeMonsters);
+    } catch (FileNotFoundException ex){}
+    String line = scanner.nextLine();
+    while (scanner.hasNextLine()) {
+      line = scanner.nextLine();
+      String[] l = line.split(",");
+      String name = l[0]; int hp = Integer.parseInt(l[1]);
+      int attacks = Integer.parseInt(l[2]);
+      int[] toHit = new int[attacks];
+      String[] damage = new String[attacks];
+      int j = 0;
+      for (int i = 3; i < ((attacks*2)+3); i+=2) {
+        toHit[j] = Integer.parseInt(l[i]); damage[j] = l[i+1];
+        j++;
+      }
+      premadeMonsterList.add(Monster.makeMonster(name, hp));
+      for (int i = 0; i < attacks; i++) {
+        Monster.addAttack(premadeMonsterList.get(premadeMonsterList.size()-1),toHit[i], damage[i]);
+      }
+    }
   }
 
   private static Button[] makeDeathSaveButtons() {
@@ -168,10 +237,51 @@ public class Main extends Application {
     return stopbutton;
   }
 
+  private static class Premadehandler implements EventHandler<ActionEvent> {
+    public void handle(ActionEvent e) {
+      Main.monsterCount++;
+      Main.pane.getChildren().remove(addbuttons.pop());
+      ComboBox<Monster> box = Main.dropDowns.pop();
+      Monster m = box.getValue();
+      monsters.add(m);
+      Main.pane.getChildren().remove(box);
+      removeMonsterBlock(fields.pop(), m);
+      addMonsterBlock();
+    }
+  }
+
   private static class Filehandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent e) {
-      Platform.exit();
+      FileChooser chooser = new FileChooser();
+      String line;
+      try {
+        scanner = new Scanner(chooser.showOpenDialog(mainStage));
+      } catch (FileNotFoundException ex){System.out.println("Filehandler error: " + ex);}
+      try {
+        line = scanner.nextLine();
+      } catch(NullPointerException exe){}
+      while (scanner.hasNextLine()) {
+        line = scanner.nextLine();
+        String[] l = line.split(",");
+        String name = l[0]; int hp = Integer.parseInt(l[1]);
+        int attacks = Integer.parseInt(l[2]);
+        int[] toHit = new int[attacks];
+        String[] damage = new String[attacks];
+        int j = 0;
+        for (int i = 3; i < ((attacks*2)+3); i+=2) {
+          toHit[j] = Integer.parseInt(l[i]); damage[j] = l[i+1];
+          j++;
+        }
+        monsters.add(Monster.makeMonster(name, hp));
+        for (int i = 0; i < attacks; i++) {
+          Monster.addAttack(monsters.get(monsters.size()-1),toHit[i], damage[i]);
+        }
+        Main.monsterCount ++;
+        Main.pane.getChildren().remove(addbuttons.pop());
+        removeMonsterBlock(fields.pop(), monsters.get(monsters.size()-1));
+        addMonsterBlock();
+      }
     }
   }
 
@@ -257,8 +367,12 @@ public class Main extends Application {
       Main.pane.getChildren().remove(addbuttons.pop());
       Main.monsterCount ++;
       TextField[] t = fields.pop();
+      String n = t[0].getCharacters().toString();
+      int h;
+      try {
+        h = Integer.parseInt(t[1].getCharacters().toString());
+      } catch(NumberFormatException ex) {return;}
       removeMonsterBlock(t);
-      String n = t[0].getCharacters().toString(); int h = Integer.parseInt(t[1].getCharacters().toString());
       if (t[2].getCharacters().length() > 0) {
         int i = Integer.parseInt(t[2].getCharacters().toString());
         addMonster(n, h, i);
@@ -266,7 +380,7 @@ public class Main extends Application {
         addMonster(n, h);
       }
       addMonsterBlock();
-      header.setText("Monster Tracker" + "\n" + "Monster Count: " + monsterCount);
+      header.setText("Monster Count: " + monsterCount);
     }
   }
 

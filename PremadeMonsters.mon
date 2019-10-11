@@ -1,0 +1,24 @@
+%Name,HP,Attacks,Attack1Name,Attack1ToHit,Attack1Dmg,Attack2Name,Attack2ToHit,Attack2Dmg...
+Aarakocra,13,2,Talon,+4,1d4+2,Javelin,+4,1d6+2
+Aboleth,135,2,Tentacle,+9,2d6+5,Tail,+9,3d6+5
+Deva,136,1,Mace,+8,1d6+4/4d8
+Planetar,200,1,Greatsword,+12,4d6+7/5d8
+Solar,243,2,Greatsword,+15,4d6+8/6d8,Slaying Longbow,+13,2d8+6/6d8
+Animated Armor,33,1,Slam,+4,1d6+2
+Flying Sword,17,1,Longsword,+3,1d8+1
+Rug of Smothering,33,1,Smother,+5,0
+Ankheg,39,1,Bite,+5,2d6+3/1d6
+Azer,39,2,Warhammer(One-handed),+5,1d8+3/1d6,Warhammer(Two-handed),+5,1d10+3/1d6
+Banshee,58,1,Corrupting Touch,+4,3d6+2
+Basilisk,52,1,Bite,+5,2d6+3/2d6
+Behir,168,2,Bite,+10,3d10+6,Constrict,+10,2d10+6/2d10+6
+Beholder,180,1,Bite,+5,4d6
+Death Tyrant,187,1,Bite,+5,4d6
+Spectator,39,1,Bite,+1,1d6-1
+Needle Blight,11,2,Claws,+3,2d4+1,Needles,+3,2d6+1
+Twig Blight,4,1,Claws,+3,1d4+1
+Vine Blight,26,1,Constrict,+4,2d6+2
+Bugbear,27,3,Morningstar,+4,2d8+2,Javelin(Melee),+4,2d6+2,Javelin(Ranged),+4,1d6+2
+Bugbear Chief,65,3,Morningstar,+5,2d8+3,Javelin(Melee),+5,2d6+3,Javelin(Ranged),+5,1d6+3
+Bulette,94,1,Bite,+7,4d12+4
+Bullywug,11,3,Bite,+3,1d4+1,Spear(Ranged),+3,1d6+1,Spear(Melee),+3,1d8+1

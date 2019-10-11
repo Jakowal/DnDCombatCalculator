@@ -19,8 +19,8 @@ public class Monster {
     curhp = maxhp;
   }
 
-  public static void addAttack(Monster m, int toHit, String damage) {
-    m.attacks.add(new Attack(toHit, damage));
+  public static void addAttack(Monster m, int toHit, String damage, String name) {
+    m.attacks.add(new Attack(toHit, damage, name));
   }
 
   public static Monster makeMonster(String n, int h, int i) {
@@ -66,6 +66,6 @@ public class Monster {
 
   @Override
   public String toString() {
-    return name + ", " + maxhp + ", " + curhp + ", " + initiative;
+    return name;
   }
 }

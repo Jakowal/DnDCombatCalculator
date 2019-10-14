@@ -1,2 +1,2 @@
 @echo OFF
-java -jar .\CombatCalc-1.0.0.jar
+java -jar .\CombatCalc-1.0.27.jar

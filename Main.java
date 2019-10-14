@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import java.io.FileNotFoundException;
 import java.io.File;
+import java.io.InputStream;
 
 import javafx.event.*;
 
@@ -14,12 +15,14 @@ import javafx.collections.ObservableList;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
+import javafx.scene.image.Image;
 
 import javafx.application.Application;
 import javafx.application.Platform;
 
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
@@ -33,15 +36,17 @@ import javafx.stage.FileChooser;
 
 public class Main extends Application {
 
-  static int monsterCount = 1;
+  static int monsterCount = 0;
+  static Text title = new Text("D&D");
   static Text header = new Text("Monster Count: " + monsterCount);
-  static Text attackHeader = new Text("Attacks");
+  static Text attackHeader = new Text("To Hit:    Damage:");
   static Pane pane = new Pane();
   static Scene scene = new Scene(pane);
   static Stage mainStage;
 
   static Scanner scanner;
-  static File premadeMonsters = new File("./PremadeMonsters.mon");
+  static InputStream premadeMonsters = Main.class.getResourceAsStream("MonsterManual.txt");
+  static Image logo = new Image(Main.class.getResourceAsStream("Logo.png"));
 
   static Stack<Button> addbuttons = new Stack<>();
   static Stack<TextField[]> fields = new Stack<>();
@@ -62,15 +67,27 @@ public class Main extends Application {
 
   @Override
   public void start(Stage stage) {
-    mainStage = stage;
+
     pane.setPrefSize(1000,600);
+    mainStage = stage;
+
+    BackgroundSize backgroundSize = new BackgroundSize(100, 100, true, true, true, false);
+    BackgroundImage b = new BackgroundImage(logo,BackgroundRepeat.REPEAT,
+          BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, backgroundSize);
+    Background background = new Background(b);
+    pane.setBackground(background);
+
+    title.setFont(new Font(25));
+    title.setX(20); title.setY(30);
+    title.setFill(Color.DARKRED);
+    pane.getChildren().add(title);
 
     header.setFont(new Font(20));
     header.setX(720);  header.setY(30);
     pane.getChildren().add(header);
 
     attackHeader.setFont(new Font(20));
-    attackHeader.setX(550);  attackHeader.setY(30);
+    attackHeader.setX(350);  attackHeader.setY(30);
     pane.getChildren().add(attackHeader);
 
     pane.getChildren().add(makeStopButton());
@@ -94,27 +111,28 @@ public class Main extends Application {
   private static void addMonsterBlock() {
     Text nameInfo = new Text("Monster name:");
     nameInfo.setFont(new Font(15));
-    nameInfo.setLayoutX(20); nameInfo.setLayoutY(65 + 70*(monsterCount-1));
+    nameInfo.setLayoutX(20); nameInfo.setLayoutY(65 + 70*(monsterCount));
     TextField name = new TextField("Monster" + monsterCount);
-    name.setLayoutX(20); name.setLayoutY(70 + 70*(monsterCount-1));
+    name.setLayoutX(20); name.setLayoutY(70 + 70*(monsterCount));
 
     Text hpInfo = new Text("HP:");
     hpInfo.setFont(new Font(15));
-    hpInfo.setLayoutX(180); hpInfo.setLayoutY(65 + 70*(monsterCount-1));
+    hpInfo.setLayoutX(180); hpInfo.setLayoutY(65 + 70*(monsterCount));
     TextField hp = new TextField();
     hp.setOnAction(new Addhandler());
-    hp.setLayoutX(180); hp.setLayoutY(70 + 70*(monsterCount-1));
+    hp.setLayoutX(180); hp.setLayoutY(70 + 70*(monsterCount));
 
     Text initiativeInfo = new Text("Initiative (Optional):");
     initiativeInfo.setFont(new Font(15));
-    initiativeInfo.setLayoutX(340); initiativeInfo.setLayoutY(65 + 70*(monsterCount-1));
+    initiativeInfo.setLayoutX(340); initiativeInfo.setLayoutY(65 + 70*(monsterCount));
     TextField initiative = new TextField();
     initiative.setOnAction(new Addhandler());
-    initiative.setLayoutX(340); initiative.setLayoutY(70 + 70*(monsterCount-1));
+    initiative.setLayoutX(340); initiative.setLayoutY(70 + 70*(monsterCount));
 
     fields.push(new TextField[]{name, hp, initiative});
     dropDowns.push(makePremadeMonsterDropdown());
 
+    pane.getChildren().add(makeFrame());
     pane.getChildren().add(nameInfo); pane.getChildren().add(hpInfo); pane.getChildren().add(initiativeInfo);
     pane.getChildren().add(name); pane.getChildren().add(hp); pane.getChildren().add(initiative);
     pane.getChildren().add(makeAddButton()); pane.getChildren().add(dropDowns.peek());
@@ -125,7 +143,7 @@ public class Main extends Application {
     ComboBox<Monster> monsterDrop = new ComboBox();
     ObservableList list = FXCollections.observableList(premadeMonsterList);
     monsterDrop.setItems(list);
-    monsterDrop.setLayoutX(720); monsterDrop.setLayoutY(70 + 70*(monsterCount-1));
+    monsterDrop.setLayoutX(720); monsterDrop.setLayoutY(70 + 70*(monsterCount));
     monsterDrop.setOnAction(new Premadehandler());
     return monsterDrop;
   }
@@ -135,7 +153,7 @@ public class Main extends Application {
     ComboBox<Attack> attackDrop = new ComboBox();
     ObservableList list = FXCollections.observableList(m.attacks);
     attackDrop.setItems(list);
-    attackDrop.setLayoutX(550); attackDrop.setLayoutY(70 + 70*(monsterCount-2));
+    attackDrop.setLayoutX(550); attackDrop.setLayoutY(70 + 70*(monsterCount-1));
     attackDrop.setOnAction(new Attackhandler());
     return attackDrop;
   }
@@ -166,7 +184,7 @@ public class Main extends Application {
       if (i == 0) {text = new Text(m.name);}
       else if (i == 1) {text = new Text(""+m.curhp);}
       else if (m.initiative != 99) {text = new Text(""+m.initiative);}
-      text.setFont(new Font(12));
+      text.setFont(new Font(15));
       text.setLayoutX(t[i].getLayoutX()); text.setLayoutY(t[i].getLayoutY()+15);
       pane.getChildren().add(text);
       if (i == 1) hpText.add(text);
@@ -181,14 +199,25 @@ public class Main extends Application {
     deathSaveSigns.add(makeDeathSaveSigns());
   }
 
+  private static Rectangle makeFrame() {
+    Rectangle r = new Rectangle();
+    r.setX(10); r.setY(45 + 70*(monsterCount));
+    r.setWidth(915); r.setHeight(60);
+    Color c = Color.rgb(211,211,211,0.65);
+    r.setFill(c);
+    return r;
+  }
+
   private static Circle[] makeDeathSaveSigns() {
     Circle[] points = new Circle[6];
+    int x = 4;
     for (int i = 0; i < 6; i++) {
       Circle p = null;
       if (i > 2) {
-        p = new Circle((204.0 + (i*8)), (65.0+70*(Main.monsterCount-2)), 4, Color.GREEN);
+        p = new Circle((230.0 + (x*15)), (80.0+70*(Main.monsterCount-1)), 6, Color.CHARTREUSE);
+        x--;
       }else {
-        p = new Circle((204.0 + (i*8)), (65.0+70*(Main.monsterCount-2)), 4, Color.RED);
+        p = new Circle((230.0 + (i*15)), (80.0+70*(Main.monsterCount-1)), 6, Color.RED);
       }
       points[i] = p;
     }
@@ -197,39 +226,38 @@ public class Main extends Application {
 
   private static void loadPremadeMonsters() {
     FileChooser chooser = new FileChooser();
-    try {scanner = new Scanner(premadeMonsters);
-    } catch (FileNotFoundException ex){}
+    scanner = new Scanner(premadeMonsters);
     String line = scanner.nextLine();
+    int x = 0;
     while (scanner.hasNextLine()) {
       line = scanner.nextLine();
-      String[] l = line.split(",");
-      String name = l[0]; int hp = Integer.parseInt(l[1]);
-      int attacks = Integer.parseInt(l[2]);
-      int[] toHit = new int[attacks];
-      String[] damage = new String[attacks];
-      String[] atkname = new String[attacks];
-      int j = 0;
-      for (int i = 3; i < ((attacks*3)+3); i+=3) {
-        atkname[j] = l[i]; toHit[j] = Integer.parseInt(l[i+1]); damage[j] = l[i+2];
-        j++;
-      }
-      premadeMonsterList.add(Monster.makeMonster(name, hp));
-      for (int i = 0; i < attacks; i++) {
-        Monster.addAttack(premadeMonsterList.get(premadeMonsterList.size()-1),toHit[i], damage[i], atkname[i]);
+      if (line.charAt(0) != '%') {
+        String[] l = line.split(",");
+        String name = l[0]; int hp = Integer.parseInt(l[1]);
+        int attacks = Integer.parseInt(l[2]);
+        int[] toHit = new int[attacks];
+        String[] damage = new String[attacks];
+        String[] atkname = new String[attacks];
+        int j = 0;
+        for (int i = 3; i < ((attacks*3)+3); i+=3) {
+          atkname[j] = l[i]; toHit[j] = Integer.parseInt(l[i+1]); damage[j] = l[i+2];
+          j++;
+        }
+        premadeMonsterList.add(Monster.makeMonster(name, hp));
+        for (int i = 0; i < attacks; i++) {
+          Monster.addAttack(premadeMonsterList.get(premadeMonsterList.size()-1),toHit[i], damage[i], atkname[i]);
+        }
       }
     }
   }
 
   private static Button[] makeDeathSaveButtons() {
     Button failButton = new Button("Bad ");
-    failButton.setLayoutX(180); failButton.setLayoutY(70 + 70*(Main.monsterCount-2));
+    failButton.setLayoutX(180); failButton.setLayoutY(70 + 70*(Main.monsterCount-1));
     failButton.setOnAction(new FailHandler());
-
     Button successButton = new Button("Good");
-    successButton.setLayoutX(230); successButton.setLayoutY(70 + 70*(Main.monsterCount-2));
+    successButton.setLayoutX(300); successButton.setLayoutY(70 + 70*(Main.monsterCount-1));
     successButton.setOnAction(new SuccessHandler());
-
-
     Button[] buttons = new Button[]{failButton, successButton};
     return buttons;
   }
@@ -243,7 +271,7 @@ public class Main extends Application {
 
   private static Button makeAddButton() {
     Button addbutton = new Button("Add");
-    addbutton.setLayoutX(950); addbutton.setLayoutY(70 + 70*(monsterCount-1));
+    addbutton.setLayoutX(950); addbutton.setLayoutY(70 + 70*(monsterCount));
     addbutton.setOnAction(new Addhandler());
     addbuttons.push(addbutton);
     return addbutton;
@@ -258,7 +286,7 @@ public class Main extends Application {
 
   private static Button makePremadeMonsterButton() {
     Button attackButton = new Button("Attack");
-    attackButton.setLayoutX(490); attackButton.setLayoutY(70+70*(monsterCount-2));
+    attackButton.setLayoutX(490); attackButton.setLayoutY(70+70*(monsterCount-1));
     attackButton.setOnAction(new Attackbuttonhandler());
     attackDropDownButtons.add(attackButton);
     return attackButton;
@@ -281,7 +309,7 @@ public class Main extends Application {
       ComboBox<Attack> box = (ComboBox<Attack>)e.getSource();
       Attack a = box.getValue();
       int[] hit = a.rollAttack();
-      Main.attackHeader.setText("To Hit: " + hit[0] + "\nDamage: " + hit[1]);
+      Main.attackHeader.setText("To Hit: " + hit[0] + "  Damage: " + hit[1]);
     }
   }
 
@@ -290,15 +318,17 @@ public class Main extends Application {
       Main.monsterCount++;
       Main.pane.getChildren().remove(addbuttons.pop());
       ComboBox<Monster> box = Main.dropDowns.pop();
-      Monster m = box.getValue();
-      monsters.add(m);
+      Monster mon = box.getValue();
+      addMonster(mon.name, mon.curhp);
+      monsters.get(monsters.size()-1).attacks = mon.attacks;
+      Monster m = monsters.get(monsters.size()-1);
       attackDropDowns.add(makePremadeMonsterAttackDropdown(m));
       Main.pane.getChildren().add(attackDropDowns.get(attackDropDowns.size()-1));
       Main.pane.getChildren().add(makePremadeMonsterButton());
       Main.pane.getChildren().remove(box);
       removeMonsterBlock(fields.pop(), m);
       addMonsterBlock();
-      header.setText("Monster Count: " + monsterCount);
+      Main.header.setText("Monster Count: " + monsterCount);
     }
   }
 
@@ -402,6 +432,7 @@ public class Main extends Application {
       }
       int damage = Integer.parseInt(damageFields.get(i).getCharacters().toString());
       m.damage(damage);
+      damageFields.get(i).clear();
       hpText.get(i).setText(""+m.curhp);
       if (!m.isAlive && !m.isStable && !m.isDead) {
         Main.pane.getChildren().remove(damageFields.get(i));

@@ -7,8 +7,8 @@ public class Monster {
   public boolean isDead = false;
   public boolean isStable = false;
   public ArrayList<Attack> attacks = new ArrayList<>();
-  String name;
-  int maxhp;
+  public String name;
+  public int maxhp;
   int initiative = 99;
   int deathSaveSuccesses = 0;
   int deathSaveFails = 0;

@@ -1,0 +1,315 @@
+%Name,HP,Attacks,Attack1Name,Attack1ToHit,Attack1Dmg,Attack2Name,Attack2ToHit,Attack2Dmg...
+Aarakocra,13,2,Talon,+4,1d4+2,Javelin,+4,1d6+2
+Aboleth,135,2,Tentacle,+9,2d6+5,Tail,+9,3d6+5
+Abominable Yeti,137,1,Claw,+11,2d6+7/2d6
+Adult Black Dragon,195,3,Bite,+11,2d1+60/1d8,Claw,+11,2d6+6,Tail,+11,2d8+6
+Adult Blue Dracolich,225,3,Bite,+12,2d10+7/1d10,Claw,+12,2d6+7,Tail,+12,2d8+7
+Adult Blue Dragon,225,3,Bite,+12,2d10+7/1d10,Claw,+12,2d8+7,Tail,+12,2d8+7
+Adult Brass Dragon,178,3,Bite,+11,2d10+6,Claw,+11,2d6+6,Tail,+11,2d8+6
+Adult Bronze Dragon,212,3,Bite,+12,2d10+7,Claw,+12,2d8+7,Tail,+12,2d8+7
+Adult Copper Dragon,184,3,Bite,+11,2d10+6,Claw,+11,2d6+6,Tail,+11,2d8+6
+Adult Gold Dragon,256,3,Bite,+14,2d10+8,Claw,+14,2d6+8,Tail,+14,2d8+8
+Adult Green Dragon,207,3,Bite,+11,2d10+6/2d6,Claw,+11,2d6+6,Tail,+11,2d8+6
+Adult Red Dragon,256,3,Bite,+14,2d10+8/2d6,Claw,+14,2d6+8,Tail,+14,2d8+8
+Adult Silver Dragon,243,3,Bite,+14,2d10+8,Claw,+14,2d6+8,Tail,+14,2d8+8
+Adult White Dragon,200,3,Bite,+11,2d10+6/1d8,Claw,+11,2d6+6,Tail,+11,2d8+6
+Air Elemental,90,1,Slam,+8,2d8+5
+Allosaurus,51,2,Bite,+6,2d10+4,Claw,+6,1d8+4
+Ancient Black Dragon,367,3,Bite,+15,2d10+8/2d8,Claw,+15,2d6+8,Tail,+15,2d8+8
+Ancient Blue Dragon,481,3,Bite,+16,2d10+9/2d10,Claw,+16,2d6+9,Tail,+16,2d8+9
+Ancient Brass Dragon,297,3,Bite,+14,2d10+8,Claw,+14,2d6+8,Tail,+14,2d8+8
+Ancient Bronze Dragon,444,3,Bite,+16,2d10+9,Claw,+16,2d6+9,Tail,+16,2d8+9
+Ancient Copper Dragon,350,3,Bite,+15,2d10+8,Claw,+15,2d6+8,Tail,+15,2d8+8
+Ancient Gold Dragon,546,3,Bite,+17,2d10+10,Claw,+17,2d6+10,Tail,+17,2d8+10
+Ancient Green Dragon,385,3,Bite,+15,2d10+8/3d6,Claw,+15,4d6+8,Tail,+15,2d8+8
+Ancient Red Dragon,546,3,Bite,+17,2d10+10/4d6,Claw,+17,2d6+10,Tail,+17,2d8+10
+Ancient Silver Dragon,487,3,Bite,+17,2d10+10,Claw,+17,2d6+10,Tail,+17,2d8+10
+Ancient White Dragon,333,3,Bite,+14,2d10+8/2d8,Claw,+14,2d6+8,Tail,+14,2d8+8
+Adrosphinx,199,1,Claw,+12,2d10+6
+Animated Armor,33,1,Slam,+4,1d6+2
+Ankheg,39,1,Bite,+5,2d6+3/1d6
+Ankylosaurus,68,1,Tail,+7,4d6+4
+Arcanaloth,104,1,Claws,+7,2d4+3/3d6
+Azer,39,2,Warhammer(One-handed),+5,1d8+3/1d6,Warhammer(Two-handed),+5,1d10+3/1d6
+Balor,262,2,Longsword,+14,3d8+8/3d8,Whip,+14,2d6+8/3d6
+Barlgura,68,2,Bite,+7,2d6+4,Fist,+7,1d10+4
+Banshee,58,1,Corrupting Touch,+4,3d6+2
+Barbed Devil,110,3,Claw,+6,1d6+3,Tail,+6,2d6+3,Hurl Flame,+5,3d6+0
+Basilisk,52,1,Bite,+5,2d6+3/2d6
+Bearded Devil,52,2,Beard,+5,1d8+2,Glaive,+5,1d10+3
+Behir,168,2,Bite,+10,3d10+6,Constrict,+10,2d10+6/2d10+6
+Beholder,180,1,Bite,+5,4d6
+Beholder Zombie,93,1,Bite,+3,4d6
+Black Dragon Wyrmling,33,1,Bite,+4,1d10+2/1d4
+Black Pudding,85,1,Pseudopod,+5,1d6+3/4d8
+Blue Dragon Wyrmling,52,1,Bite,+5,1d10+3/1d6
+Blue Slaad,123,2,Bite,+8,2d6+5,Claw,+8,2d6+5
+Bone Devil,142,2,Claw,+8,1d8+4,Sting,+8,2d8+4/5d6
+Bone Naga,58,1,Bite,+5,2d6+3
+Bugbear,27,3,Morningstar,+4,2d8+2,Javelin(Melee),+4,2d6+2,Javelin(Ranged),+4,1d6+2
+Bugbear Chief,65,3,Morningstar,+5,2d8+3,Javelin(Melee),+5,2d6+3,Javelin(Ranged),+5,1d6+3
+Bulette,94,1,Bite,+7,4d12+4
+Bullywug,11,3,Bite,+3,1d4+1,Spear(Ranged),+3,1d6+1,Spear(Melee),+3,1d8+1
+Brass Dragon Wyrmling,16,1,Bite,+4,1d10+2
+Bronze Dragon Wyrmling,32,1,Bite,+5,1d10+3
+Cambion,82,3,Spear(Melee),+7,1d8+4/1d6,Spear(Ranged),+7,1d6+4/1d6,Fire Ray,+7,3d6
+Carrion Crawler,51,2,Tentacles,+8,1d4+2,Bite,+4,2d4+2
+Centaur,45,3,Pike,+6,1d10+4,Hooves,+6,2d6+4,Longbow,+4,1d8+2
+Chain Devil,85,1,Chain,+8,2d6+4
+Chasme,84,1,Proboscis,+5,4f6+2/7d6
+Chimera,114,3,Bite,+7,2d6+4,Horns,+7,1d12+4,Claws,+7,2d6+4
+Chuul,93,1,Pincer,+6,2d6+4
+Clay Golem,133,1,Slam,+8,2d10+5
+Cloaker,78,2,Bite,+6,2d6+3,Tail,+6,1d8+3
+Cloud Giant,200,2,Morningstar,+12,3d8+8,Rock,+12,4d10+8
+Cockatrice,27,1,Bite,+3,1d4+1
+Copper Dragon Wyrmling,22,1,Bite,+4,1d10+2
+Couatl,97,2,Bite,+8,1d6+5,Constrict,+6,2d6+3
+Crawling Claw,2,1,Claw,+3,1d4+1
+Cyclops,138,2,Greatclub,+9,3d8+6,Rock,+9,4d10+6
+Dao,187,2,Fist,+10,2d8+6,Maul,+10,4d6+6
+Darkmantle,22,1,Crush,+5,1d6+3
+Death Knight,180,2,Longsword(One-handed),+11,1d8+5/4d8,Longsword(Two-handed),+11,1d10+5/4d8
+Death Slaad,170,3,Bite,+9,1d8+5/2d6,Claws,+9,1d10+5/2d6,Greatsword,+9,2d6+5/2d6
+Death Tyrant,187,1,Bite,+5,4d6
+Deep Gnome,16,2,War Pick,+4,1d8+2,Poisoned Dart,+4,1d4+2
+Demilich,80,0
+Deva,136,1,Mace,+8,1d6+4/4d8
+Displacer Beast,85,1,Tentacle,+6,1d6+4/1d6
+Djinni,161,1,Scimitar,+9,2d6+5/1d6
+Doppelganger,52,1,Slam,+6,1d6+4
+Dragon Turtle,341,3,Bite,+13,3d12+7,Claw,+13,2d8+7,Tail,+13,2d8+7
+Dretch,18,2,Bite,+2,1d6,Claws,+2,2d4
+Drider,123,4,Bite,+6,1d4/2d8,Longsword(One-handed),+6,1d8+3,Longsword(Two-handed),+6,1d10+3,Longbow,+6,1d8+3/1d8
+Drow,13,2,Shortsword,+4,1d6+2,Hand Crossbow,+4,1d6+2
+Drow Elite Warrior,71,2,Shortsword,+7,1d6+4,Hand Crossbow,+7,1d6+4
+Drow Mage,45,2,Staff,+2,1d6-1/1d6,Staff(Two-handed),+2,1d8-1/1d6
+Drow Priestess of Lolth,71,1,Scourge,+5,1d6+2/5d6
+Dryad,22,2,Club,+2,1d4,Club(Shillelagh),+6,1d8+4
+Duergar,26,4,War Pick,+4,1d8+2,War Pick(Enlarged),+4,2d8+2,Javelin,+4,1d6+2,Javelin(Enlarged),+4,2d6+2
+Duodrone,11,2,Fist,+2,1d4,Javelin,+3,1d6+1
+Dust Merphit,17,1,Claws,+4,1d4+2
+Earth Elemental,126,1,Slam,+8,2d8+5
+Efreeti,200,2,Scimitar,+10,2d6+6/2d6,Hurl Flame,+7,5d6
+Empyrean,313,2,Maul,+17,6d6+10,Bolt,+15,7d6
+Erinyes,153,3,Longsword(One-handed),+8,1d8+4/3d8,Longsword(Two-handed),+8,1d10+4/3d6,Longbow,+7,1d8+3+3d8
+Ettercap,44,2,Bite,+4,1d8+2/1d8,Claws,+4,2d4+2
+Ettin,85,2,Battleaxe,+7,2d8+5,Morningstar,+7,2d8+5
+Faerie Dragon,14,1,Bite,+7,0d0+1
+Fire Elemental,102,1,Touch,+6,2d6+3
+Fire Giant,162,2,Greatsword,+11,6d6+7,Rock,+11,4d10+7
+Fire Snake,22,2,Bite,+3,1d4+1/1d6,Tail,+3,1d4+1/1d6
+Flameskull,40,1,Fire Ray,+5,3d6
+Flesh Golem,93,1,Slam,+7,2d8+4
+Flumph,7,1,Tendrils,+4,1d4+2/1d4
+Flying Sword,17,1,Longsword,+3,1d8+1
+Fomorian,149,1,Greatclub,+9,3d8+6
+Frost Giant,138,2,Greataxe,+9,3d12+6,Rock,+9,4d10+6
+Galeb Duhr,85,1,Slam,+8,2d6+5
+Gargoyle,52,2,Bite,+4,1d6+2,Claws,+4,1d6+2
+Gas Spore,1,1,Touch,+0,0d0+1
+Gelatinous Cube,84,1,Pseudopod,+4,3d6
+Ghost,45,1,Withering Touch,+5,4d6+3
+Ghast,36,2,Bite,+3,2d8+3,Claws,+5,2d6+3
+Ghouk,22,2,Bite,+2,2d6+2,Claws,+4,2d4+2
+Gibbering Mouther,67,1,Bites,+2,5d6
+Githyanki Warrior,49,1,Greatsword,+4,2d6+2/2d6
+Githyanki Knight,91,1,Silver Greatsword,+9,2d6+6/3d6
+Githzerai Monk,38,1,Unarmed Strike,+4,1d8+2/2d8
+Githzerai Zerth,84,1,Unarmed Strike,+7,2d6+4/3d8
+Glabrezu,157,2,Pincer,+9,2d10+5,Fist,+9,2d4+2
+Gnoll,22,4,Bite,+4,1d4+2,Spear(One-handed),+4,1d6+2,Spear(Two-handed),+4,1d8+2,Longbow,+3,1d8+1
+Gnoll Pack Lord,49,3,Bite,+5,1d4+3,Glaive,+5,1d10+3,Longbow,+4,1d8+2
+Gnoll Fang of Yeenoghu,65,2,Bite,+5,1d6+3,Claw,+5,1d8+3
+Goblin,7,2,Scimitar,+4,1d6+2,Shortbow,+4,1d6+2
+Goblin Boss,21,2,Scimitar,+4,1d6+2,Javelin,+2,1d6
+Gold Dragon Wyrmling,75,1,Bite,+6,1d10++4
+Gorgon,114,2,Gore,+8,2d12+5,Hooves,+8,2d10+5
+Goristro,310,3,Fist,+13,3d8+7,Hoof,+13,3d10+7,Gore,+13,7d10+7
+Gray Ooze,22,1,Pseudopod,+3,1d6+1/2d6
+Green Dragon Wyrmling,38,1,Bite,+4,1d10+2,1d6
+Green Hag,82,1,Claws,+6,2d8+4
+Green Slaad,127,4,Bite,+7,2d6+4,Claw,+7,1d6+4,Staff,+7,2d6+4,Hurl Flame,+4,3d6
+Gray Slaad,127,3,Bite,+7,1d6+3,Claws,+7,1d10+3,Greatsword,+7,2d6+3
+Grell,55,2,Tentacles,+4,1d10+2,Beak,+4,2d4+2
+Grick,27,2,Tentacles,+4,2d6+2,Beak,+4,1d6+2
+Grick Alpha,75,3,Tail,+7,2d6+4,Tentacles,+7,4d8+5,Beak,+7,2d8+4
+Griffon,59,2,Beak,+6,1d8+4,Claws,+6,2d6+4
+Grimlock,11,1,Spiked Bone Club,+5,1d4+3/1d4
+Guardian Naga,127,2,Bite,+8,1d8+4,Spit Poison,+8,10d8
+Gynosphinx,136,1,Claw,+8,2d8+4
+Half-Ogre,30,2,Battleaxe,+5,2d8+3,Javelin,+5,2d6+3
+Half-Red Dragon Veteran,65,4,Longsword(One-handed),+5,1d8+3,Longsword(Two-handed),+5,1d10+3,Shortsword,+5,1d6+3,Heavy Crossbow,+3,1d10+1
+Harpy,38,2,Claws,+3,2d4+1,Club,+3,1d4+1
+Hell Hound,45,1,Bite,+5,1d8+3/2d6
+Helmed Horror,60,2,Longsword(One-handed),+6,1d8+4,Longsword(Two-handed),+6,1d10+4
+Hezrou,136,2,Bite,+7,2d10+4,Claw,+7,2d6+4
+Hill Giant,105,2,Greatclub,+8,3d8+5,Rock,+8,3d10+5
+Hippogriff,19,2,Beak,+5,1d10+3,Claws,+5,2d6+3
+Hobgoblin,11,3,Longsword(One-handed),+3,1d8+1,Longsword(Two-handed),+3,1d10+1,Longbow,+3,1d8+1
+Hobgoblin Captain,39,2,Greatsword,+4,2d6+2,Javelin,+4,1d6+2
+Hobgoblin Warlord,97,4,Longsword(One-handed),+9,1d8+3,Longsword(Two-handed),+9,1d10+3,Shield Bash,+9,1d4+3,Javelin,+9,1d6+3
+Homonculus,5,1,Bite,+4,0d0+1
+Hook Horror,75,1,Hook,+6,2d6+4
+Horned Devil,178,3,Fork,+10,2d8+6,Tail,+10,1d8+6,Hurl Flame,+7,4d6
+Hydra,172,1,Bite,+8,1d10+5
+Ice Devil,180,3,Bite,+10,2d6+5/3d6,Claws,+10,2d4+5/3d6,Tail,+10,2d6+5/3d6
+Ice Merpgit,21,1,Claws,+3,1d4+1/1d4
+Imp,10,1,Sting(Bite),+5,1d4+3
+Intellect Devourer,21,1,Claws,+4,2d4+2
+Invisible Stalker,104,1,Slam,+6,2d6+3
+Iron Golem,210,2,Slam,+13,3d8+7,Sword,+13,3d10+7
+Jackalwere,18,2,Bite,+4,1d4+2,Scimitar,+4,1d6+2
+Kenku,13,2,Shortsword,+5,1d6+3,Shortbow,+5,1d6+3
+Kobold,5,2,Dagger,+4,1d4+2,Sling,+4,1d4+2
+Kraken,472,2,Bite,+17,3d8+10,Tentacle,+17,3d6+10
+Kuo-Toa,18,4,Bite,+3,1d4+1,Spear(Ranged),+3,1d6+1,Spear(Melee),+3,1d8+1,Net,+3,0d0
+Kuo-Toa Archpriest,97,2,Scepter,+6,1d6+3/4d6,Unarmed Strike,+6,1d4+3
+Kuo-Toa Whip,65,2,Bite,+4,1d4+2,Pincer Staff,+4,1d6+2
+Lamia,97,3,Claws,+5,2d10+3,Dagger,+5,1d4+3,Intoxicating Touch,+5,0d0
+Lemure,13,1,Fist,+3,1d4
+Lich,135,1,Paralyzing Touch,+12,3d6
+Lizardfolk,22,4,Bite,+4,1d6+2,Heavy Club,+4,1d6+2,Javelin,+4,1d6+2,Spiked Shield,+4,1d6+2
+Lizardfolk Shaman,27,3,Bite(Lizardfolk),+4,1d6+2,Bite(Crocodile),+4,1d10+2,Claws,+4,1d4+2
+Lizard King/Queen,78,4,Bite,+5,1d6+3,Claws,+5,1d4+3,Trident,+5,1d6+3,Trident,+5,1d8+3
+Magma Merphit,22,1,Claws,+3,1d4+1/1d4
+Magmin,9,1,Touch,+4,2d6
+Manes,9,1,Claws,+2,2d4
+Manticore,68,3,Bite,+5,1d8+3,Claw,+5,1d6+3,Tail Spike,+5,1d8+3
+Marid,229,2,Trident(One-handed),+10,2d6+6,Trident(Two-handed),+10,2d8+6
+Marilith,189,2,Longsword,+9,2d8+4,Tail,+9,2d10+4
+Medusa,127,3,Snake Hair,+5,1d4+2/4d6,Shortsword,+5,1d6+2,Longbow,+5,1d8+2/2d6
+Merfolk,11,2,Spear(Ranged),+2,1d6,Spear(Melee),+2,1d8
+Merrow,45,3,Bite,+6,1d8+4,Claws,+6,2d4+4,Harpoon,+6,2d6+4
+Mezzoloth,75,3,Claws,+7,2d4+4,Trident(One-clawed),+7,1d6+4,Trident(Two-clawed),+7,1d8+4
+Mimic,58,2,Pseudopod,+5,1d8+3,Bite,+5,1d8+3,1d8
+Mind Flayer,71,2,Tentacles,+7,2d10+4,Extract Brain,+7,10d10
+Minotaur,76,2,Greataxe,+6,2d12+4,Gore,+6,2d8+4
+Minotaur Skeleton,67,2,Greataxe,+6,2d12+4,Gore,+6,2d8+4,
+Mondrone,5,2,Dagger,+3,1d4+1,Javelin,+2,1d6
+Mud Merphit,27,1,Fists,+3,1d6+1
+Mummy,58,1,Rotting Fist,+5,2d6+3/3d6
+Mummy Lord,97,1,Rotting Fist,+9,3d6+4/6d6
+Myconid Sprout,7,1,Fist,+1,1d4
+Myconid Adult,22,1,Fist,+2,2d4/2d4
+Myconid Sovereign,60,1,Fist,+3,3d4+1/3d4
+Nalfeshnee,184,2,Bite,+10,5d10+5,Claw,+10,3d6+5
+Needle Blight,11,2,Claws,+3,2d4+1,Needles,+3,2d6+1
+Night Hag,112,1,Claws,+7,13,2d8+4
+Nightmare,68,1,Hooves,+6,2d8+4
+Nothic,45,1,Claw,+4,1d6+3
+Nycaloth,123,2,Claw,+9,2d6+5,Greataxe,+9,2d12+5
+Ochre Jelly,45,1,Pseudopod,+4,2d6+2/1d6
+Ogre,59,2,Greatclub,+6,2d8+4,Javelin,+6,2d6+4
+Ogre Zombie,85,1,Morningstar,+6,2d8+4
+Oni,110,3,Claw,+7,1d8+4,Glaive(Large),+7,2d10+4,Glaive(Small/Medium),+7,1d10+4
+Orc,15,2,Greataxe,+5,1d12+3,Javelin,+5,1d6+3
+Orc Eye of Gruumsh,45,2,Spear(Ranged),+5,1d6+3/1d8,Spear(Melee),+5,2d8+3
+Orc War Chief,93,3,Greataxe,+6,1d12+4/1d8,Spear(Ranged),+6,1d6+4/1d8,Spear(Melee),+6,2d8+4
+Orog,42,2,Greataxe,+6,1d12+4,Javelin,+6,1d6+4
+Otyugh,114,2,Bite,+6,2d8+3,Tentaclt,+6,1d8+3/1d8
+Owlbear,52,2,Beak,+7,1d10+5,Claws,+7,2d8+5
+Pegasus,59,1,Hooves,+6,2d6+4
+Pentadrone,32,1,Arm,+4,1d6+2,
+Pit Fiend,300,4,Bite,+14,+4d6+8,Claw,+14,2d8+8,Mace,+14,2d6+8/6d6,Tail,+14,3d10+8
+Planetar,200,1,Greatsword,+12,4d6+7/5d8
+Pleiosaurus,68,1,Bite,+6,3d6+4
+Pteranodon,13,1,Bite,+3,2d4+1
+Peryton,33,2,Gore,+5,1d8+3,Talons,+5,2d4+3
+Piercer,22,1,Drop,+3,1d6
+Pixie,1,0
+Pseudodragon,7,2,Bite,+4,1d4+2,Sting,+4,1d4+2
+Purple Worm,247,2,Bite,+9,3d8+9,Tail Stinger,+9,3d6+9
+Quasit,7,1,Claws(Bite),+4,1d4+3
+Quadrone,22,2,Fist,+3,1d4+1,Shortbow,+4,1d6+2
+Quaggoth,45,1,Claw,+5,1d6+3
+Quaggoth Spore Servant,45,1,Claw,+5,1d6+3
+Rakshasa,110,1,Claw,+7,2d6+2
+Red Dragon Wyrmling,75,1,Bite,+6,1d10/1d6
+Red Slaad,93,2,Bite,+6,2d4+3,Claw,+6,1d8+3
+Remorhaz,195,1,Bite,+11,6d10+7/3d6
+Revenant,136,1,Fist,+7,2d6+4
+Roc,248,2,Beak,+13,4d8+9,Talons,+13,4d6+9
+Roper,93,2,Bite,+7,4d8+4,Tendril,+7,0d0
+Rug of Smothering,33,1,Smother,+5,0
+Rust Monster,27,1,Bite,+3,1d8+1
+Sahuagin,22,4,Bite,+3,1d4+1,Claws,+3,1d4+1,Spear(Ranged),+3,1d6+1,Spear(Melee),+3,1d8+1
+Sahuagin Priestess,33,2,Bite,+3,1d4+1,Claws,+3,1d4+1
+Sahuagin Baron,76,4,Bite,+7,2d4+4,Claws,+7,2d6+4,Trident(Ranged),+7,2d6+4,Trident(Melee),+7,2d8+4
+Salamander,90,3,Spear(Ranged),+7,2d6+4,Spear(Melee),+7,2d8+4,Tail,+7,2d6+4
+Satyr,31,3,Ram,+3,2d4+1,Shortsword,+5,1d6+3,Shortbow,+5,1d6+3
+Scarecrow,36,1,Claw,+3,2d4+1
+Sea Hag,52,1,Claws,+5,2d6+3
+Shadow,16,1,Strength Drain,+4,2d6+2
+Shadow Demon,66,1,Claws,+5,2d6+3
+Shambling Mound,136,1,Slam,+7,2d8+4
+Shield Guardian,142,1,Fist,+7,2d6+4
+Shrieker,13,0
+Silver Dragon Wyrmling,45,1,Bite,+6,1d10
+Skeleton,13,2,Shortsword,+4,1d6+2,Shortbow,+4,1d6+2
+Slaad Tadpole,10,1,Bite,+4,1d4+2
+Smoke Merphit,22,1,Claws,+4,1d4+2
+Spectator,39,1,Bite,+1,1d6-1
+Specter,22,1,Life Drain,+4,3d6
+Spined Devil,22,3,Bite,+2,2d4,Fork,+2,1d6,Tail Spine,+4,1d4/1d6
+Spirit Naga,75,1,Bite,+7,1d6+4
+Sprite,2,2,Longsword,+2,0d0+1,Shortbow,+6,0d0+1
+Solar,243,2,Greatsword,+15,4d6+8/6d8,Slaying Longbow,+13,2d8+6/6d8
+Steam Merphit,21,1,Claws,+2,1d4+2/1d4
+Stirge,2,1,Blood Drain,+5,1d4+3
+Stone Giant,126,2,Greatclub,+9,3d8+6,Rock,+9,4d10+6
+Stone Golem,178,1,Slam,+10,3d8+6
+Storm Giant,230,2,Greatsword,+14,6d6+9,Rock,+9,4d12+9
+Succubus,66,1,Claw,+5,1d6+3
+Tarrasque,676,4,Bite,+19,4d12+10,Claw,+19,4d8+10,Horns,+19,4d10+10,Tail,+19,4d6+10
+Thri-Kreen,33,2,Bite,+3,1d6+1,Claws,+3,2d4+1
+Treant,138,2,Slam,+10,3d6+6,Rock,+10,4d10+6
+Triceratops,95,2,Gore,+9,4d8+6,Stomp,+9,3d10+6
+Tridrone,16,2,Fist,+3,1d4+1,Javelin,+3,1d6+1
+Troglodyte,13,2,Bite,+4,1d4+2,Claw,+4,1d4+2
+Troll,84,2,Bite,+7,1d6+4,Claw,+7,2d6+4
+Tyrannosaurus Rex,136,2,Bite,+10,3d12+7,Tail,+10,3d8+7
+Twig Blight,4,1,Claws,+3,1d4+1
+Ultroloth,153,2,Longsword(One-handed),+8,1d8+3,Longsword(Two-handed),+8,1d10+3
+Umber Hulk,93,2,Claw,+8,1d8+5,Mandibles,+8,2d8+5
+Unicorn,67,2,Hooves,+7,2d6+4,Horn,+7,1d8+4
+Vampire,144,2,Unarmed Strike,+9,1d8+4,Bite,+9,1d6+4/3d6
+Vampire Spawn,82,2,Claws,+6,2d4+3,Bite,+6,1d6+3/2d6
+Vine Blight,26,1,Constrict,+4,2d6+2
+Violet Fungus,18,1,Rotting Touch,+2,1d8
+Vrock,104,2,Talons,+6,2d6+3,Talons,+6,2d10+3
+Water Elemental,114,1,Slam,+7,2d8+4
+Water Weird,58,1,Constrict,+5,3d6+3
+Warhorse Skeleton,22,1,Hooves,+6,2d6+4
+Werebear,135,3,Bite,+7,2d10+4,Claw,+7,2d8+4,Greataxe,+7,1d12+4
+Wereboar,78,2,Maul,+5,2d6+3,Tusks,+5,2d6+3
+Wererat,33,3,Bite,+4,1d4+2,Shortsword,+4,1d6+2,Hand Crossbow,+4,1d6+2
+Weretiger,120,4,Bite,+5,1d10+3,Claw,+5,1d8+3,Scimitar,+5,1d6+3,Longbow,+4,1d8+2
+Werewolf,58,4,Bite,+4,1d8+2,Claws,+4,2d4+2,Spear(Ranged),+4,1d6+2,Spear(Melee),+4,1d8+2
+White Dragon Wyrmling,32,1,Bite,+4,1d10+2/1d4
+Wight,45,4,Life Drain,+4,1d6+2,Longsword(One-handed),+4,1d8+2,Longsword(Two-handed),+4,1d10+2,Longbow,+4,1d8+2
+Will-o'-Wisp,22,1,Shock,+4,2d8
+Winged Kobold,7,2,Dagger,+5,1d4+3,Dropped Rock,+5,1d6+3
+Wraith,67,1,Life Drain,+6,4d8+3
+Wyvern,110,3,Bite,+7,2d6+4,Claws,+7,2d8+4,Stinger,+7,2d6+4
+Xorn,73,2,Claw,+6,1d6+3,Bite,+6,3d6+3
+Yeti,51,1,Claw,+6,1d6+4/1d6
+Yochlol,136,1,Slam(Bite),+6,1d6+2/6d6
+Young Black Dragon,127,2,Bite,+7,2d10+4/1d8,Claw,+7,2d6+4
+Young Blue Dragon,152,2,Bite,+9,2d10+5/1d10,Claw,+9,2d6+5
+Young Brass Dragon,110,2,Bite,+7,2d10+4,Claw,+7,2d6+4
+Young Bronze Dragon,142,2,Bite,+9,2d10+5,Claw,+9,2d6+5
+Young Copper Dragon,119,2,Bite,+7,2d10+4,Claw,+7,2d6+4
+Young Gold Dragon,178,2,Bite,+10,2d10+6,Claw,+10,2d6+4
+Young Green Dragon,136,2,Bite,+7,2d10+4/2d6,Claw,+7,2d6+4
+Young Red Dragon,178,2,Bite,+10,2d10+6/1d6,Claw,+10,2d6+4
+Young Red Shadow Dragon,178,2,Bite,+10,2d10+6/1d6,Claw,+10,2d6+6
+Young Remorhaz,93,1,Bite,+6,3d10+4/2d6
+Young Silver Dragon,168,2,Bite,+10,2d10+6,Claw,+10,2d6+4
+Young White Dragon,133,2,Bite,+7,2d10+4/1d8,Claw,+7,2d6+4
+Yuan-ti Abomination,127,4,Bite,+7,1d6+4/3d6,Constrict,+7,2d6+4,Scimitar,+7,2d6+4,Longbow,+6,2d8+3/3d6
+Yuan-ti Malison 1,66,3,Bite,+5,1d4+3/2d6,Scimitar,+5,1d6+3,Longbow,+4,1d8+2/2d6
+Yuan-ti Malison 2,66,1,Bite,+5,1d4+3/2d6
+Yuan-ti Malison 3,66,4,Bite,+5,1d4+3/2d6,Constrict,+5,2d6+3,Scimitar,+5,1d6+3,Longbow,+5,1d8+2
+Yuan-ti Pureblood,40,2,Scimitar,+3,1d6+1,Shortbow,+3,1d6+1/2d6
+Zombie,22,1,Slam,+3,1d6+1
